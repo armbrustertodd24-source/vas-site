@@ -18,6 +18,33 @@
   /* Borders */
   --color-rim: rgba(255, 255, 255, 0.07);
   --color-rim-accent: rgba(212, 168, 67, 0.25);
+
+  /* ─────────────────────────────────────────────────────────
+     Claude Academy (the standalone /learn training site).
+     Namespaced cl-* tokens — a warm "paper" identity, fully
+     independent from the gold-on-navy VAS palette above.
+     ───────────────────────────────────────────────────────── */
+  --color-cl-bg: #f6f3ec;
+  --color-cl-surface: #fffdf8;
+  --color-cl-surface-2: #efe9dd;
+  --color-cl-ink: #211d17;
+  --color-cl-ink-soft: #4c4639;
+  --color-cl-muted: #756c5d;
+  --color-cl-accent: #c2603f;
+  --color-cl-accent-dark: #a44a2c;
+  --color-cl-accent-soft: rgba(194, 96, 63, 0.1);
+  --color-cl-rim: rgba(33, 29, 23, 0.1);
+  --color-cl-rim-accent: rgba(194, 96, 63, 0.3);
+
+  /* Per-track accent hues (for wayfinding across the 4 tracks) */
+  --color-cl-chat: #2f6fb0;
+  --color-cl-chat-soft: rgba(47, 111, 176, 0.12);
+  --color-cl-design: #7c5cc4;
+  --color-cl-design-soft: rgba(124, 92, 196, 0.12);
+  --color-cl-cowork: #2f9e7a;
+  --color-cl-cowork-soft: rgba(47, 158, 122, 0.12);
+  --color-cl-code: #c08a2e;
+  --color-cl-code-soft: rgba(192, 138, 46, 0.12);
 }
 
 @theme inline {
@@ -129,4 +156,25 @@ body {
   padding: 0.15em 0.4em;
   font-size: 0.875em;
   color: #d4a843;
+}
+
+/* ── Claude Academy (learn) helpers ── */
+/* Radix accordion height animation, used by LearnAccordion */
+@keyframes cl-accordion-down {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+@keyframes cl-accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+.cl-accordion-open { animation: cl-accordion-down 0.22s ease-out; }
+.cl-accordion-closed { animation: cl-accordion-up 0.22s ease-out; }
+
+/* Subtle grid texture for hero backdrops on the training site */
+.cl-grid {
+  background-image:
+    linear-gradient(rgba(33, 29, 23, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(33, 29, 23, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
