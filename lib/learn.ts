@@ -1,9 +1,9 @@
-import { MessageSquare, Sparkles, Briefcase, Terminal, type LucideIcon } from "lucide-react"
+import { MessageSquare, Sparkles, Briefcase, Terminal, Workflow, type LucideIcon } from "lucide-react"
 
 export const BRAND = "Claude Academy"
-export const BRAND_TAGLINE = "Go from curious to proficient with every Claude tool."
+export const BRAND_TAGLINE = "Go from curious to proficient with every Claude tool — then put it on autopilot."
 
-export type TrackSlug = "chat" | "design" | "cowork" | "code"
+export type TrackSlug = "chat" | "design" | "cowork" | "code" | "automation"
 
 export interface Track {
   slug: TrackSlug
@@ -81,6 +81,21 @@ export const TRACKS: Track[] = [
     border: "border-cl-code",
     ring: "ring-cl-code",
     gradient: "from-cl-code/20 to-cl-code/0",
+  },
+  {
+    slug: "automation",
+    name: "AI Automation",
+    short: "Automate",
+    tagline: "Put Claude to work while you sleep",
+    blurb:
+      "Wire Claude into no-code automation tools like Make, n8n, and Zapier. Trigger workflows from email, forms, and schedules, let Claude do the thinking, then write results back to your apps — no babysitting required.",
+    icon: Workflow,
+    text: "text-cl-auto",
+    bg: "bg-cl-auto",
+    softBg: "bg-cl-auto-soft",
+    border: "border-cl-auto",
+    ring: "ring-cl-auto",
+    gradient: "from-cl-auto/20 to-cl-auto/0",
   },
 ]
 

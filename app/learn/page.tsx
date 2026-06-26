@@ -17,6 +17,7 @@ const learnings: Record<string, string[]> = {
   design: ["Build & edit Artifacts live", "Interactive apps & diagrams", "Organize work in Projects", "Publish and share"],
   cowork: ["Connect your apps", "Delegate multi-step tasks", "Add Skills & automations", "Review and refine output"],
   code: ["Install & first run", "Plan mode & slash commands", "Skills, hooks & MCP", "Subagents & the cloud"],
+  automation: ["Build your first workflow", "Claude as the brain step", "Structured data & branching", "Reliable, hands-off pipelines"],
 }
 
 const approach = [
@@ -40,9 +41,9 @@ export default function LearnHome() {
               Master every Claude tool, one step at a time.
             </h1>
             <p className="text-cl-muted text-lg leading-relaxed max-w-xl mb-8">
-              {BRAND_TAGLINE} Four guided tracks — Chat, Design, Cowork, and Code —
-              packed with visuals, walkthroughs, and cheat-sheets that take you from
-              complete beginner to confident pro.
+              {BRAND_TAGLINE} Five guided tracks — Chat, Design, Cowork, Code, and
+              Automation — packed with visuals, walkthroughs, and cheat-sheets that
+              take you from complete beginner to confident pro.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
@@ -87,7 +88,7 @@ export default function LearnHome() {
       <section id="tracks" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 scroll-mt-20">
         <FadeIn className="max-w-2xl mb-10">
           <p className="text-cl-accent-dark text-sm font-semibold uppercase tracking-widest mb-3">
-            Four tracks, one path
+            Five tracks, one path
           </p>
           <h2 className="font-display font-700 text-3xl sm:text-4xl text-cl-ink mb-3">
             Pick a tool and go from zero to proficient
@@ -145,7 +146,7 @@ export default function LearnHome() {
               The recommended path
             </h2>
           </FadeIn>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {TRACKS.map((t, i) => (
               <FadeIn key={t.slug} delay={i * 0.08}>
                 <Link href={`/learn/${t.slug}`} className="group block">

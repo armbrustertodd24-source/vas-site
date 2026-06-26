@@ -6,7 +6,7 @@ export default function LearnFooter() {
   return (
     <footer className="mt-24 border-t border-cl-rim bg-cl-surface">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid gap-10 md:grid-cols-[1.5fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
           <div className="max-w-sm">
             <Link href="/learn" className="flex items-center gap-2.5 mb-4">
               <span className="w-8 h-8 rounded-lg bg-cl-accent flex items-center justify-center">
@@ -35,6 +35,29 @@ export default function LearnFooter() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wider text-cl-muted mb-4">
+              Membership
+            </p>
+            <ul className="space-y-2.5">
+              <li>
+                <Link href="/learn/pricing" className="text-sm text-cl-ink-soft hover:text-cl-accent transition-colors">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn/chat" className="text-sm text-cl-ink-soft hover:text-cl-accent transition-colors">
+                  Start free
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-sm text-cl-ink-soft hover:text-cl-accent transition-colors">
+                  Teams &amp; firms
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

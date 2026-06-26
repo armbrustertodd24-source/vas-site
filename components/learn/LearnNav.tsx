@@ -37,7 +37,7 @@ export default function LearnNav() {
         </Link>
 
         {/* Desktop track links */}
-        <div className="hidden md:flex items-center gap-0.5">
+        <div className="hidden lg:flex items-center gap-0.5">
           {TRACKS.map((t) => {
             const href = `/learn/${t.slug}`
             const active = pathname === href
@@ -58,14 +58,25 @@ export default function LearnNav() {
 
         <div className="flex items-center gap-2">
           <Link
+            href="/learn/pricing"
+            className={cn(
+              "hidden lg:inline-flex items-center px-3.5 py-2 rounded-lg text-sm font-medium transition-colors",
+              pathname === "/learn/pricing"
+                ? "text-cl-accent bg-cl-accent-soft"
+                : "text-cl-muted hover:text-cl-ink hover:bg-cl-surface-2"
+            )}
+          >
+            Pricing
+          </Link>
+          <Link
             href="/learn"
-            className="hidden md:inline-flex items-center h-9 px-4 rounded-lg bg-cl-ink text-cl-bg text-sm font-semibold hover:bg-cl-accent transition-colors"
+            className="hidden lg:inline-flex items-center h-9 px-4 rounded-lg bg-cl-ink text-cl-bg text-sm font-semibold hover:bg-cl-accent transition-colors"
           >
             Start here
           </Link>
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-lg text-cl-muted hover:text-cl-ink hover:bg-cl-surface-2 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-cl-muted hover:text-cl-ink hover:bg-cl-surface-2 transition-colors"
             aria-label="Toggle menu"
           >
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -74,7 +85,7 @@ export default function LearnNav() {
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-cl-rim bg-cl-bg">
+        <div className="lg:hidden border-t border-cl-rim bg-cl-bg">
           <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-1">
             <Link
               href="/learn"
@@ -100,6 +111,18 @@ export default function LearnNav() {
                 </Link>
               )
             })}
+            <Link
+              href="/learn/pricing"
+              onClick={() => setOpen(false)}
+              className={cn(
+                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                pathname === "/learn/pricing"
+                  ? "text-cl-accent bg-cl-accent-soft"
+                  : "text-cl-muted hover:text-cl-ink hover:bg-cl-surface-2"
+              )}
+            >
+              Pricing
+            </Link>
           </div>
         </div>
       )}
