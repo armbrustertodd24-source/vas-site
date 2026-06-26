@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Check, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { FadeInStagger, FadeInItem } from "@/components/FadeIn"
+import SubscribeButton from "@/components/learn/SubscribeButton"
 
 interface Plan {
   name: string
@@ -15,7 +16,9 @@ interface Plan {
   cadence: string
   features: string[]
   cta: string
-  href: string
+  /** Free plan links somewhere; paid plans start Stripe Checkout. */
+  href?: string
+  checkout?: "pro" | "founding"
   featured?: boolean
   badge?: string
 }
@@ -51,7 +54,7 @@ const plans: Plan[] = [
       "Cancel anytime",
     ],
     cta: "Go Pro",
-    href: "/contact",
+    checkout: "pro",
     featured: true,
     badge: "Most popular",
   },
@@ -68,7 +71,7 @@ const plans: Plan[] = [
       "Locks in every future track",
     ],
     cta: "Become a founding member",
-    href: "/contact",
+    checkout: "founding",
   },
 ]
 
@@ -141,17 +144,32 @@ export default function PricingPlans() {
                   {showAnnualNote ? plan.annualNote : isPro ? "Billed monthly" : " "}
                 </p>
 
-                <Link
-                  href={plan.href}
-                  className={cn(
-                    "inline-flex items-center justify-center h-11 rounded-xl text-sm font-semibold transition-colors mb-6",
+                {(() => {
+                  const ctaClass = cn(
+                    "inline-flex items-center justify-center w-full h-11 rounded-xl text-sm font-semibold transition-colors mb-6",
                     plan.featured
                       ? "bg-cl-accent text-white hover:bg-cl-accent-dark"
                       : "border border-cl-rim text-cl-ink hover:border-cl-rim-accent"
-                  )}
-                >
-                  {plan.cta}
-                </Link>
+                  )
+                  if (plan.checkout) {
+                    const planKey =
+                      plan.checkout === "founding"
+                        ? "founding"
+                        : annual
+                        ? "pro_annual"
+                        : "pro_monthly"
+                    return (
+                      <SubscribeButton plan={planKey} className={ctaClass}>
+                        {plan.cta}
+                      </SubscribeButton>
+                    )
+                  }
+                  return (
+                    <Link href={plan.href ?? "/learn/chat"} className={ctaClass}>
+                      {plan.cta}
+                    </Link>
+                  )
+                })()}
 
                 <ul className="space-y-2.5 mt-auto">
                   {plan.features.map((f) => (
