@@ -2,7 +2,7 @@ import { type LucideIcon } from "lucide-react"
 import { COURSES } from "@/content/courses"
 import { getIcon } from "@/lib/icons"
 
-export const BRAND = "Claude Academy"
+export const BRAND = "Promptu"
 export const BRAND_TAGLINE =
   "Go from curious to proficient with the AI tools that actually matter."
 

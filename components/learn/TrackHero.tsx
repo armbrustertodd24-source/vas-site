@@ -28,7 +28,7 @@ export default function TrackHero({
         <FadeIn>
           {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 text-xs text-cl-muted mb-5">
-            <Link href="/learn" className="hover:text-cl-ink transition-colors">Academy</Link>
+            <Link href="/learn" className="hover:text-cl-ink transition-colors">Promptu</Link>
             <ChevronRight className="w-3 h-3" />
             <span className="text-cl-ink-soft">{track.name}</span>
           </nav>

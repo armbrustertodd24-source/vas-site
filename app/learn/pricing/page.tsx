@@ -9,7 +9,7 @@ import { Section } from "@/components/learn/Section"
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Simple pricing for the academy. Start free, go Pro for every track and level, or grab a lifetime founding membership. Team plans available for firms.",
+    "Simple pricing for Promptu. Start free, go Pro for every track and level, or grab a lifetime founding membership. Team plans available for firms.",
 }
 
 export default function PricingPage() {

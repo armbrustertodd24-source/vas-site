@@ -15,8 +15,8 @@ export default function LearnFooter() {
               <span className="font-display font-700 text-cl-ink text-[15px]">{BRAND}</span>
             </Link>
             <p className="text-cl-muted text-sm leading-relaxed">
-              A hands-on, visual guide to getting proficient with Claude — from your
-              first conversation to automating real work.
+              A hands-on, visual guide to getting proficient with today&apos;s AI tools —
+              from your first conversation to automating real work.
             </p>
           </div>
 
@@ -63,10 +63,12 @@ export default function LearnFooter() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-cl-rim flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-cl-muted text-xs">
-            An independent learning resource. Not affiliated with or endorsed by Anthropic.
+          <p className="text-cl-muted text-xs max-w-xl">
+            {BRAND} is an independent learning resource — not affiliated with or endorsed by
+            Anthropic, OpenAI, or Google. Claude, ChatGPT, and Gemini are trademarks of their
+            respective owners.
           </p>
-          <p className="text-cl-muted text-xs">© {new Date().getFullYear()} {BRAND}</p>
+          <p className="text-cl-muted text-xs whitespace-nowrap">© {new Date().getFullYear()} {BRAND}</p>
         </div>
       </div>
     </footer>

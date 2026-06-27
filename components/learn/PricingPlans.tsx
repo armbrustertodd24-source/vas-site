@@ -41,7 +41,7 @@ const plans: Plan[] = [
   },
   {
     name: "Pro",
-    tagline: "The whole academy, always up to date.",
+    tagline: "Every course, always up to date.",
     priceMonthly: "$9",
     priceAnnual: "$79",
     annualNote: "≈ $6.58/mo, billed yearly",

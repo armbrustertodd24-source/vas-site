@@ -5,11 +5,11 @@ import { BRAND } from "@/lib/learn"
 
 export const metadata: Metadata = {
   title: {
-    default: `${BRAND} — Learn Claude, step by step`,
+    default: `${BRAND} — Master every AI tool, step by step`,
     template: `%s | ${BRAND}`,
   },
   description:
-    "A hands-on, visual training site for getting proficient with Claude — Claude Chat, Projects & Artifacts, Cowork, and Claude Code. Beginner to proficient with guides, visuals, and reference cheat-sheets.",
+    "A hands-on, visual training platform for getting proficient with today's AI tools — Claude, ChatGPT, Gemini, and AI automation. Beginner to proficient with guides, visuals, and reference cheat-sheets.",
 }
 
 export default function LearnLayout({

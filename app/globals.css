@@ -20,7 +20,7 @@
   --color-rim-accent: rgba(212, 168, 67, 0.25);
 
   /* ─────────────────────────────────────────────────────────
-     Claude Academy (the standalone /learn training site).
+     Promptu (the standalone /learn training site).
      Namespaced cl-* tokens — a warm "paper" identity, fully
      independent from the gold-on-navy VAS palette above.
      ───────────────────────────────────────────────────────── */
@@ -164,7 +164,7 @@ body {
   color: #d4a843;
 }
 
-/* ── Claude Academy (learn) helpers ── */
+/* ── Promptu (learn) helpers ── */
 /* Radix accordion height animation, used by LearnAccordion */
 @keyframes cl-accordion-down {
   from { height: 0; opacity: 0; }
