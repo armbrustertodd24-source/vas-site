@@ -4,7 +4,7 @@ import { getIcon } from "@/lib/icons"
 
 export const BRAND = "Claude Academy"
 export const BRAND_TAGLINE =
-  "Go from curious to proficient with every Claude tool — then put it on autopilot."
+  "Go from curious to proficient with the AI tools that actually matter."
 
 export type TrackSlug = string
 
@@ -28,6 +28,7 @@ export const ACCENTS: Record<string, AccentClasses> = {
   cowork: { text: "text-cl-cowork", bg: "bg-cl-cowork", softBg: "bg-cl-cowork-soft", border: "border-cl-cowork", ring: "ring-cl-cowork", gradient: "from-cl-cowork/20 to-cl-cowork/0" },
   code: { text: "text-cl-code", bg: "bg-cl-code", softBg: "bg-cl-code-soft", border: "border-cl-code", ring: "ring-cl-code", gradient: "from-cl-code/20 to-cl-code/0" },
   auto: { text: "text-cl-auto", bg: "bg-cl-auto", softBg: "bg-cl-auto-soft", border: "border-cl-auto", ring: "ring-cl-auto", gradient: "from-cl-auto/20 to-cl-auto/0" },
+  gpt: { text: "text-cl-gpt", bg: "bg-cl-gpt", softBg: "bg-cl-gpt-soft", border: "border-cl-gpt", ring: "ring-cl-gpt", gradient: "from-cl-gpt/20 to-cl-gpt/0" },
 }
 
 export interface Track extends AccentClasses {

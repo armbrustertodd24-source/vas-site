@@ -20,6 +20,7 @@ import ArtifactMockup from "@/components/learn/mockups/ArtifactMockup"
 import CoworkMockup from "@/components/learn/mockups/CoworkMockup"
 import CodeMockup from "@/components/learn/mockups/CodeMockup"
 import AutomationMockup from "@/components/learn/mockups/AutomationMockup"
+import GptMockup from "@/components/learn/mockups/GptMockup"
 import GenericMockup from "@/components/learn/mockups/GenericMockup"
 
 const MOCKUPS: Record<string, React.ComponentType> = {
@@ -28,6 +29,7 @@ const MOCKUPS: Record<string, React.ComponentType> = {
   cowork: CoworkMockup,
   code: CodeMockup,
   automation: AutomationMockup,
+  chatgpt: GptMockup,
 }
 
 function toFeatures(items: FeatureItem[]): Feature[] {

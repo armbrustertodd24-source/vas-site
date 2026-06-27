@@ -47,6 +47,8 @@
   --color-cl-code-soft: rgba(192, 138, 46, 0.12);
   --color-cl-auto: #c2517d;
   --color-cl-auto-soft: rgba(194, 81, 125, 0.12);
+  --color-cl-gpt: #0d9488;
+  --color-cl-gpt-soft: rgba(13, 148, 136, 0.12);
 }
 
 @theme inline {

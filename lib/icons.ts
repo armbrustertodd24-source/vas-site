@@ -12,6 +12,7 @@ import {
   ShieldCheck, CalendarClock, Mail, FolderGit2, FileSearch, Bot, Repeat,
   Terminal, GitCommitHorizontal, Map, Slash, Webhook, Server,
   MonitorSmartphone, Cloud, FileCog, Clock, Database, Braces, Bell, KeyRound,
+  Image,
   type LucideIcon,
 } from "lucide-react"
 
@@ -22,6 +23,7 @@ export const ICONS: Record<string, LucideIcon> = {
   ShieldCheck, CalendarClock, Mail, FolderGit2, FileSearch, Bot, Repeat,
   Terminal, GitCommitHorizontal, Map, Slash, Webhook, Server,
   MonitorSmartphone, Cloud, FileCog, Clock, Database, Braces, Bell, KeyRound,
+  Image,
 }
 
 /** Resolve an icon name to a component, falling back to a neutral icon. */
