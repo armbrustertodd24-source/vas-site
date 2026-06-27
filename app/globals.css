@@ -30,11 +30,11 @@
   --color-cl-ink: #211d17;
   --color-cl-ink-soft: #4c4639;
   --color-cl-muted: #756c5d;
-  --color-cl-accent: #c2603f;
-  --color-cl-accent-dark: #a44a2c;
-  --color-cl-accent-soft: rgba(194, 96, 63, 0.1);
+  --color-cl-accent: #9a2f3f;
+  --color-cl-accent-dark: #7c2532;
+  --color-cl-accent-soft: rgba(154, 47, 63, 0.1);
   --color-cl-rim: rgba(33, 29, 23, 0.1);
-  --color-cl-rim-accent: rgba(194, 96, 63, 0.3);
+  --color-cl-rim-accent: rgba(154, 47, 63, 0.3);
 
   /* Per-track accent hues (for wayfinding across the 4 tracks) */
   --color-cl-chat: #2f6fb0;
