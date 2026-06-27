@@ -3,9 +3,10 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, GraduationCap, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { TRACKS, BRAND } from "@/lib/learn"
+import PromptuMark from "@/components/learn/PromptuMark"
 
 export default function LearnNav() {
   const pathname = usePathname()
@@ -51,9 +52,7 @@ export default function LearnNav() {
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/learn" className="flex items-center gap-2.5 group">
-          <span className="w-8 h-8 rounded-lg bg-cl-accent flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
-            <GraduationCap className="w-[18px] h-[18px] text-white" />
-          </span>
+          <PromptuMark className="w-8 h-8 flex-shrink-0 group-hover:scale-105 transition-transform" />
           <span className="font-display font-700 text-cl-ink text-[15px] tracking-tight">{BRAND}</span>
         </Link>
 

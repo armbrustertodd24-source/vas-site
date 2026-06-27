@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { GraduationCap } from "lucide-react"
 import { TRACKS, BRAND } from "@/lib/learn"
+import PromptuMark from "@/components/learn/PromptuMark"
 
 export default function LearnFooter() {
   return (
@@ -9,9 +9,7 @@ export default function LearnFooter() {
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
           <div className="max-w-sm">
             <Link href="/learn" className="flex items-center gap-2.5 mb-4">
-              <span className="w-8 h-8 rounded-lg bg-cl-accent flex items-center justify-center">
-                <GraduationCap className="w-[18px] h-[18px] text-white" />
-              </span>
+              <PromptuMark className="w-8 h-8" />
               <span className="font-display font-700 text-cl-ink text-[15px]">{BRAND}</span>
             </Link>
             <p className="text-cl-muted text-sm leading-relaxed">
