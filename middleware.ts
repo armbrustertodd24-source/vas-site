@@ -3,22 +3,25 @@ import { NextResponse, type NextRequest } from "next/server"
 /**
  * Host-based routing.
  *
- * Promptu (the training site) lives at /learn inside this app, while the
- * Vector Automation Systems marketing site lives at the root. When a visitor
- * hits the bare getpromptu.com domain we transparently show the Promptu home
- * (rewrite "/" -> "/learn") so the brand owns its own root.
+ * This repo holds two sites: the Vector Automation Systems marketing site at
+ * the root, and the Promptu training site under /learn. This branch/deployment
+ * is the *Promptu* one, so its root should show Promptu everywhere — the
+ * getpromptu.com domain, Vercel preview URLs, and local dev — by transparently
+ * rewriting "/" to "/learn".
  *
- * SAFETY: this only acts when the request host is getpromptu.com (or www).
- * For every other host — vectorautomationsystems.com, localhost, Vercel
- * preview URLs — it does nothing, so the VAS site is never affected, no matter
- * where it's deployed from. The matcher also restricts this to the "/" path
- * only, so no other route is touched.
+ * SAFETY: the only hosts excluded are the VAS marketing domains, which keep
+ * their normal root. So even if this code ever reaches the VAS deployment,
+ * vectorautomationsystems.com is never redirected to Promptu. The matcher also
+ * limits this to the "/" path only — no other route is touched.
  */
-const PROMPTU_HOSTS = new Set(["getpromptu.com", "www.getpromptu.com"])
+const VAS_HOSTS = new Set([
+  "vectorautomationsystems.com",
+  "www.vectorautomationsystems.com",
+])
 
 export function middleware(req: NextRequest) {
-  const host = (req.headers.get("host") ?? "").toLowerCase()
-  if (PROMPTU_HOSTS.has(host)) {
+  const host = (req.headers.get("host") ?? "").toLowerCase().split(":")[0]
+  if (!VAS_HOSTS.has(host)) {
     const url = req.nextUrl.clone()
     url.pathname = "/learn"
     return NextResponse.rewrite(url)
