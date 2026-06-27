@@ -54,7 +54,7 @@ Tables created: `user`, `account`, `session`, `verificationToken`
    Services → Credentials → **Create OAuth client ID** (Web application).
 3. Authorized redirect URI:
    - dev: `http://localhost:3000/api/auth/callback/google`
-   - prod: `https://YOURDOMAIN/api/auth/callback/google`
+   - prod: `https://getpromptu.com/api/auth/callback/google`
 4. Put the client id/secret in `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET`, and set
    `AUTH_URL` to your public URL in production.
 

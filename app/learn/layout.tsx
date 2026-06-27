@@ -4,6 +4,7 @@ import LearnFooter from "@/components/learn/LearnFooter"
 import { BRAND } from "@/lib/learn"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://getpromptu.com"),
   title: {
     default: `${BRAND} — Master every AI tool, step by step`,
     template: `%s | ${BRAND}`,
