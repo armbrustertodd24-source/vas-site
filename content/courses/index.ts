@@ -13,8 +13,9 @@ import cowork from "./cowork"
 import code from "./code"
 import automation from "./automation"
 import chatgpt from "./chatgpt"
+import gemini from "./gemini"
 
-export const COURSES: Course[] = [chat, design, cowork, code, automation, chatgpt]
+export const COURSES: Course[] = [chat, design, cowork, code, automation, chatgpt, gemini]
 
 export function getCourse(slug: string): Course | undefined {
   return COURSES.find((c) => c.catalog.slug === slug)

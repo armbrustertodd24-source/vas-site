@@ -29,6 +29,7 @@ export const ACCENTS: Record<string, AccentClasses> = {
   code: { text: "text-cl-code", bg: "bg-cl-code", softBg: "bg-cl-code-soft", border: "border-cl-code", ring: "ring-cl-code", gradient: "from-cl-code/20 to-cl-code/0" },
   auto: { text: "text-cl-auto", bg: "bg-cl-auto", softBg: "bg-cl-auto-soft", border: "border-cl-auto", ring: "ring-cl-auto", gradient: "from-cl-auto/20 to-cl-auto/0" },
   gpt: { text: "text-cl-gpt", bg: "bg-cl-gpt", softBg: "bg-cl-gpt-soft", border: "border-cl-gpt", ring: "ring-cl-gpt", gradient: "from-cl-gpt/20 to-cl-gpt/0" },
+  gemini: { text: "text-cl-gemini", bg: "bg-cl-gemini", softBg: "bg-cl-gemini-soft", border: "border-cl-gemini", ring: "ring-cl-gemini", gradient: "from-cl-gemini/20 to-cl-gemini/0" },
 }
 
 export interface Track extends AccentClasses {

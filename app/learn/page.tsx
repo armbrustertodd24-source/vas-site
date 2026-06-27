@@ -19,6 +19,7 @@ const learnings: Record<string, string[]> = {
   code: ["Install & first run", "Plan mode & slash commands", "Skills, hooks & MCP", "Subagents & the cloud"],
   automation: ["Build your first workflow", "Claude as the brain step", "Structured data & branching", "Reliable, hands-off pipelines"],
   chatgpt: ["Prompt like a pro", "Files, data & images", "Voice & web browsing", "Build custom GPTs"],
+  gemini: ["Chat with Gemini", "Inside Gmail & Docs", "Analyze Drive & images", "Build custom Gems"],
 }
 
 const approach = [
@@ -42,8 +43,8 @@ export default function LearnHome() {
               Master every AI tool, one step at a time.
             </h1>
             <p className="text-cl-muted text-lg leading-relaxed max-w-xl mb-8">
-              {BRAND_TAGLINE} Six guided tracks — Claude Chat, Design, Cowork, Code,
-              Automation, and ChatGPT — packed with visuals, walkthroughs, and
+              {BRAND_TAGLINE} Seven guided tracks — Claude Chat, Design, Cowork, Code,
+              Automation, ChatGPT, and Gemini — packed with visuals, walkthroughs, and
               cheat-sheets that take you from complete beginner to confident pro.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -89,7 +90,7 @@ export default function LearnHome() {
       <section id="tracks" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 scroll-mt-20">
         <FadeIn className="max-w-2xl mb-10">
           <p className="text-cl-accent-dark text-sm font-semibold uppercase tracking-widest mb-3">
-            Six tracks, one path
+            Seven tracks, one path
           </p>
           <h2 className="font-display font-700 text-3xl sm:text-4xl text-cl-ink mb-3">
             Pick a tool and go from zero to proficient
