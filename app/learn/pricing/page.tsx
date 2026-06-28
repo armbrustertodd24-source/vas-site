@@ -27,8 +27,9 @@ export default function PricingPage() {
               One membership, every AI skill.
             </h1>
             <p className="text-cl-muted text-lg leading-relaxed">
-              Start free and learn Claude Chat end to end. Upgrade to unlock all five
-              tracks, every level, and each new track we ship — at one simple price.
+              Start free with every track&apos;s Beginner level. Upgrade to unlock the
+              Intermediate &amp; Proficient lessons across all seven tracks — at one
+              simple price.
             </p>
           </FadeIn>
         </div>
@@ -75,8 +76,8 @@ export default function PricingPage() {
       <Section eyebrow="Before you decide" title="Pricing questions">
         <LearnAccordion
           items={[
-            { q: "Is the free plan really free?", a: <>Yes — the entire Claude Chat track and the first lesson of every other track are free forever, no card required. It&apos;s a real chunk of the academy, not a teaser.</> },
-            { q: "What do I get with Pro?", a: <>All five tracks (Chat, Design, Cowork, Code, and Automation), all three levels in each, every cheat-sheet, and every new track and lesson we add while you&apos;re a member.</> },
+            { q: "Is the free plan really free?", a: <>Yes — every track&apos;s <strong>Beginner</strong> level is free forever, across all seven tools, no card required. It&apos;s a real intro to each tool, not a teaser.</> },
+            { q: "What do I get with Pro?", a: <>Pro unlocks the <strong>Intermediate</strong> and <strong>Proficient</strong> levels — the advanced, power-user material — on all seven tracks, plus every new track and lesson we add while you&apos;re a member.</> },
             { q: "What does “Founding” include?", a: <>Everything in Pro, forever, for a single one-time payment — plus a founding-member badge. It&apos;s a limited launch offer to reward early supporters.</> },
             { q: "Can I cancel anytime?", a: <>Yes. Pro is month-to-month (or annual) and you can cancel whenever — you keep access through the end of your billing period.</> },
             { q: "Do the Claude tools cost extra?", a: <>This is a membership for the <strong>learning platform</strong>. Claude itself has its own free and paid plans, and the Automation track uses the pay-as-you-go Claude API — we&apos;ll always point out when a step has its own cost.</> },

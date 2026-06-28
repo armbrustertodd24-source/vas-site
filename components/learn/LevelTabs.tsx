@@ -2,12 +2,15 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { Lock } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export interface Level {
   id: string
   label: string
   blurb: string
+  /** Show a lock icon on the tab (content gated behind a paid plan). */
+  locked?: boolean
 }
 
 export default function LevelTabs({
@@ -52,6 +55,9 @@ export default function LevelTabs({
                   {i + 1}
                 </span>
                 <span className="font-display font-600 text-sm">{lvl.label}</span>
+                {lvl.locked && (
+                  <Lock className={cn("w-3 h-3 ml-0.5", active === i ? "text-white/80" : "text-cl-muted")} />
+                )}
               </span>
               <span
                 className={cn(

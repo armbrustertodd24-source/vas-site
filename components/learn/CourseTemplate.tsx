@@ -11,6 +11,7 @@ import FeatureGrid, { type Feature } from "@/components/learn/FeatureGrid"
 import RefTable, { type RefRow } from "@/components/learn/RefTable"
 import Callout from "@/components/learn/Callout"
 import LearnAccordion from "@/components/learn/LearnAccordion"
+import LockedPanel from "@/components/learn/LockedPanel"
 import RichText from "@/components/learn/RichText"
 import type { FeatureItem, RefTableData } from "@/content/courses/types"
 
@@ -45,11 +46,21 @@ function toRows(table: RefTableData): RefRow[] {
   }))
 }
 
-export default function CourseTemplate({ course }: { course: Course }) {
+export default function CourseTemplate({
+  course,
+  hasAccess = false,
+}: {
+  course: Course
+  /** Whether the viewer may see gated (Intermediate / Proficient) levels. */
+  hasAccess?: boolean
+}) {
   const track = getTrack(course.catalog.slug)
   if (!track) notFound()
 
   const Mockup = course.mockup ? MOCKUPS[course.mockup] : undefined
+
+  // Beginner is free on every track; the rest needs a paid plan.
+  const isLocked = (levelId: string) => !hasAccess && levelId !== "beginner"
 
   return (
     <>
@@ -80,30 +91,39 @@ export default function CourseTemplate({ course }: { course: Course }) {
       >
         <LevelTabs
           activeBg={track.bg}
-          levels={course.roadmap.levels.map((l) => ({ id: l.id, label: l.label, blurb: l.blurb }))}
-          panels={course.roadmap.levels.map((level) => (
-            <LevelPanel key={level.id} heading={level.heading}>
-              <StepGuide
-                accentBg={track.bg}
-                steps={level.steps.map((s) => ({
-                  title: s.title,
-                  body: <RichText>{s.body}</RichText>,
-                }))}
-              />
-              {level.callout && (
-                <Callout variant={level.callout.variant} title={level.callout.title}>
-                  <RichText>{level.callout.body}</RichText>
-                </Callout>
-              )}
-              {level.table && (
-                <RefTable
-                  caption={level.table.caption}
-                  columns={level.table.columns}
-                  rows={toRows(level.table)}
+          levels={course.roadmap.levels.map((l) => ({
+            id: l.id,
+            label: l.label,
+            blurb: l.blurb,
+            locked: isLocked(l.id),
+          }))}
+          panels={course.roadmap.levels.map((level) =>
+            isLocked(level.id) ? (
+              <LockedPanel key={level.id} label={level.label} blurb={level.blurb} />
+            ) : (
+              <LevelPanel key={level.id} heading={level.heading}>
+                <StepGuide
+                  accentBg={track.bg}
+                  steps={level.steps.map((s) => ({
+                    title: s.title,
+                    body: <RichText>{s.body}</RichText>,
+                  }))}
                 />
-              )}
-            </LevelPanel>
-          ))}
+                {level.callout && (
+                  <Callout variant={level.callout.variant} title={level.callout.title}>
+                    <RichText>{level.callout.body}</RichText>
+                  </Callout>
+                )}
+                {level.table && (
+                  <RefTable
+                    caption={level.table.caption}
+                    columns={level.table.columns}
+                    rows={toRows(level.table)}
+                  />
+                )}
+              </LevelPanel>
+            )
+          )}
         />
       </Section>
 
