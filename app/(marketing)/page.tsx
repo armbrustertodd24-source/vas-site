@@ -15,6 +15,7 @@ import {
   LifeBuoy,
   ArrowRight,
   CheckCircle2,
+  ShieldCheck,
 } from "lucide-react"
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/FadeIn"
 import WorkflowMockup from "@/components/WorkflowMockup"
@@ -413,6 +414,32 @@ export default function HomePage() {
             </FadeInItem>
           ))}
         </FadeInStagger>
+      </section>
+
+      {/* ── Guarantee ── */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <FadeIn>
+          <div className="rounded-2xl border border-rim-accent bg-surface p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start">
+            <div className="w-14 h-14 rounded-xl bg-accent-muted border border-rim-accent flex items-center justify-center flex-shrink-0">
+              <ShieldCheck className="w-7 h-7 text-accent" />
+            </div>
+            <div>
+              <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-2">
+                Our Guarantee
+              </p>
+              <h2 className="font-display font-700 text-2xl md:text-3xl text-ink mb-3">
+                The 30-day pilot: it books real jobs, or you don&apos;t continue
+              </h2>
+              <p className="text-subtle leading-relaxed">
+                Every new client starts with a 30-day pilot on their real phone line. You
+                see every call it answered, every job it booked, and every emergency it
+                dispatched — checked against your own schedule, not our dashboard. If the
+                numbers don&apos;t justify the cost, you walk away and your setup fee comes
+                back with you.
+              </p>
+            </div>
+          </div>
+        </FadeIn>
       </section>
 
       {/* ── FAQ Preview ── */}

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { MessageSquare, Phone, ArrowRight, CheckCircle2, XCircle } from "lucide-react"
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/FadeIn"
+import { site, telHref } from "@/lib/site"
 
 export const metadata: Metadata = {
   title: "Demo — Call the Line and Hear the AI Answer",
@@ -83,10 +84,19 @@ export default function DemoPage() {
                 on a 100° day, or a flooded living room. It will answer, qualify the job,
                 and offer to book you.
               </p>
-              <p className="text-accent font-display font-700 text-xl tracking-wide">
-                Demo number coming online
-              </p>
-              {/* PLUG IN: Demo phone number + Vapi/Retell/ElevenLabs voice agent here */}
+              {site.demoPhone ? (
+                <a
+                  href={telHref(site.demoPhone)}
+                  className="text-accent font-display font-700 text-3xl md:text-4xl tracking-wide hover:underline"
+                >
+                  {site.demoPhone}
+                </a>
+              ) : (
+                <p className="text-accent font-display font-700 text-xl tracking-wide">
+                  Demo number coming online
+                </p>
+              )}
+              {/* Set demoPhone in lib/site.ts once the voice agent line is provisioned */}
             </div>
           </div>
         </FadeIn>

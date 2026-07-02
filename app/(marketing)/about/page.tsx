@@ -131,8 +131,8 @@ export default function AboutPage() {
                 </span>
               </div>
               <div>
-                <h3 className="font-display font-600 text-ink text-xl mb-1">Founder &amp; Lead Automation Engineer</h3>
-                <p className="text-accent text-sm mb-3">Vector Automation Systems</p>
+                <h3 className="font-display font-600 text-ink text-xl mb-1">Todd Armbruster</h3>
+                <p className="text-accent text-sm mb-3">Founder &amp; Lead Automation Engineer, Vector Automation Systems</p>
                 <div className="space-y-3 text-subtle text-sm leading-relaxed">
                   <p>
                     Before building automation systems, I spent 20 years in the military and

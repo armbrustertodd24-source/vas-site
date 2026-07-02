@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Zap } from "lucide-react"
+import { Zap, Phone } from "lucide-react"
+import { site, telHref } from "@/lib/site"
 
 const nav = [
   { label: "Home", href: "/" },
@@ -39,6 +40,15 @@ export default function Footer() {
             Contact Us
           </Link>
         </div>
+        {site.demoPhone && (
+          <a
+            href={telHref(site.demoPhone)}
+            className="mt-6 inline-flex items-center gap-2 text-accent text-sm font-semibold hover:underline"
+          >
+            <Phone className="w-4 h-4" />
+            Call the demo line: {site.demoPhone}
+          </a>
+        )}
       </div>
 
       {/* Bottom bar */}
