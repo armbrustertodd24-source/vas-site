@@ -75,7 +75,7 @@ export default function Nav() {
         <div className="flex items-center gap-3">
           <Link
             href="/demo"
-            className="hidden md:inline-flex items-center justify-center h-9 px-5 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-colors"
+            className="hidden md:inline-flex items-center justify-center h-9 px-5 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-colors whitespace-nowrap"
           >
             Hear It Answer
           </Link>

@@ -17,6 +17,9 @@ import { NextResponse, type NextRequest } from "next/server"
 const VAS_HOSTS = new Set([
   "vectorautomationsystems.com",
   "www.vectorautomationsystems.com",
+  // This branch carries the VAS marketing pivot — show it in local dev too.
+  "localhost",
+  "127.0.0.1",
 ])
 
 export function middleware(req: NextRequest) {
