@@ -1,86 +1,76 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import {
-  MessageSquare,
   Phone,
+  PhoneMissed,
   Calendar,
-  Mail,
+  BellRing,
   GitBranch,
-  HeadphonesIcon,
-  Blocks,
+  Star,
   ArrowRight,
 } from "lucide-react"
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/FadeIn"
 
 export const metadata: Metadata = {
-  title: "Services — AI Automation for Personal Injury Law Firms",
+  title: "Services — AI Receptionists for Home Service Companies",
   description:
-    "Explore Vector Automation Systems' AI automation services built for personal injury attorneys — from intake chat and voice agents to retainer follow-up and CRM automation.",
+    "The VAS AI receptionist answers every call 24/7, qualifies the job, dispatches emergencies, and books work into your schedule — built for restoration, HVAC, and plumbing companies.",
 }
 
 const services = [
   {
-    icon: MessageSquare,
-    title: "AI Chat Intake Assistants",
-    what: "A 24/7 AI chat system embedded on your website that engages potential clients, gathers case details, and books consultations automatically.",
+    icon: Phone,
+    title: "24/7 AI Call Answering",
+    what: "An AI receptionist trained on your services, service area, hours, and pricing rules — answering every call in seconds, around the clock.",
     problem:
-      "Most PI firms lose leads after hours and on weekends. A potential client injured on a Saturday night who doesn't get a response goes to the next firm on Google.",
+      "After-hours and overflow calls go to voicemail, and customers with an emergency don't leave messages. They hang up and dial the next company on Google — and that company gets the job.",
     result:
-      "Every website visitor gets an immediate, intelligent response — any time of day. The AI gathers injury details, screens the case, and books a consultation without anyone on your team being involved.",
+      "Every call answered before the second ring, every caller handled like your best CSR picked up. You stop losing jobs to your own voicemail — nights, weekends, and the busy season included.",
   },
   {
-    icon: Phone,
-    title: "AI Voice Agents",
-    what: "An AI phone agent that answers calls when your staff can't — capturing case details, screening the caller, and scheduling consultations.",
+    icon: BellRing,
+    title: "Emergency Qualification & Dispatch",
+    what: "The AI captures what happened, where, and how bad — then immediately calls or texts your on-call tech with the details for genuine emergencies.",
     problem:
-      "Overflow and after-hours calls go to voicemail. Most injured people don't leave messages — they call the next firm. Every missed call is a potential case you'll never know about.",
+      "A burst pipe or an active water loss can't wait for the morning callback. If the customer can't reach a human fast, they keep calling competitors until someone answers.",
     result:
-      "Every call gets answered. The AI gathers the caller's information, screens the case for viability, and either books a consultation or transfers to a live person when appropriate.",
+      "Urgent jobs reach your on-call tech in minutes with the full picture already captured — address, damage type, severity, photos. You show up first, and first usually wins the job.",
   },
   {
     icon: Calendar,
-    title: "Consultation Booking Automation",
-    what: "A fully automated scheduling system that lets potential clients book free consultations directly into your calendar based on your availability and intake criteria.",
+    title: "Job Booking & Scheduling",
+    what: "The AI checks your real availability and books qualified jobs straight into your calendar or field service software — confirmations and reminders included.",
     problem:
-      "Back-and-forth scheduling is slow, and slow intake kills conversions. Injured people in pain who can't get a quick appointment will find someone who can see them sooner.",
+      "Even answered calls die in the back-and-forth of scheduling. Callbacks get missed, sticky notes get lost, and the customer books with whoever locked in a time slot first.",
     result:
-      "Potential clients book directly after pre-screening. Automated confirmations and reminders reduce no-shows. Your consultation calendar stays full without your staff managing it.",
+      "Callers hang up with an appointment on your schedule, not a promise of a callback. Reminders cut no-shows, and your crew starts the day with a full board.",
   },
   {
-    icon: Mail,
-    title: "Retainer Follow-Up Systems",
-    what: "Automated multi-step follow-up sequences via SMS and email that keep unretained leads engaged and move them toward signing.",
+    icon: PhoneMissed,
+    title: "Missed-Call Text-Back",
+    what: "Any call that doesn't connect triggers an instant, personalized text to the caller — starting a conversation the moment the phone stops ringing.",
     problem:
-      "Most firms follow up once or twice, then move on. But many PI leads need several touchpoints before they're ready to sign — and your competitors are following up more consistently.",
+      "Even great phone coverage misses calls — double calls, bad signal, crew swamped. Each one is a customer standing in a flooded kitchen wondering who else to call.",
     result:
-      "Every lead that doesn't sign immediately gets a strategic follow-up sequence. Timely, relevant messages keep your firm top of mind until the prospect is ready to move forward.",
+      "Missed callers get a text within seconds and stay in a conversation with your company instead of dialing the next one. Many jobs are saved by that one automatic text.",
   },
   {
     icon: GitBranch,
-    title: "CRM & Intake Pipeline Automation",
-    what: "Workflow automations that update your case management system, move leads through intake stages, and trigger team notifications based on case status.",
+    title: "CRM & Field Service Integration",
+    what: "Every call, transcript, booking, and customer record flows automatically into ServiceTitan, Housecall Pro, Jobber, GoHighLevel, or the platform you already run.",
     problem:
-      "Manual data entry into your CRM is time-consuming and inconsistent. When intake information is scattered or missing, it slows down your team and creates gaps in the pipeline.",
+      "Call details scribbled on paper or living in one person's head means lost history, double data entry, and jobs that fall through the cracks between the phone and the schedule.",
     result:
-      "Your CRM stays current automatically. Leads are tagged by injury type, stage, and activity. Your intake team always has a clear view of where every potential case stands.",
+      "Your existing system stays the source of truth — updated automatically. Every lead is logged, every job traceable, and nothing depends on someone remembering to type it in.",
   },
   {
-    icon: HeadphonesIcon,
-    title: "Client Communication Automation",
-    what: "Automated communication workflows that keep signed clients updated on their case status, upcoming appointments, and document needs — without staff manually reaching out.",
+    icon: Star,
+    title: "Follow-Up, Reviews & Rebooking",
+    what: "Automated sequences that chase unsold estimates, request reviews after completed jobs, and bring past customers back for maintenance and seasonal work.",
     problem:
-      "Signed clients who don't hear from their attorney's office become anxious and generate inbound calls that pull your staff off more important work.",
+      "Most companies quote and forget. Estimates go cold, happy customers never leave the review, and the customer list sits idle while ad spend goes up.",
     result:
-      "Clients get proactive, timely updates through automated messages. Fewer inbound client calls, higher client satisfaction scores, and more time for your team to focus on actual casework.",
-  },
-  {
-    icon: Blocks,
-    title: "Custom AI Intake Workflows",
-    what: "Purpose-built automation systems designed around your firm's specific intake process, practice areas, and team structure.",
-    problem:
-      "Generic automation tools aren't built for law firms. Workarounds and half-finished setups lead to broken workflows and more manual cleanup than before.",
-    result:
-      "A system built specifically for your firm — your intake questions, your case criteria, your tools, your team. We map your process first and build something that actually fits.",
+      "Estimates get followed up until they close or say no. Reviews accumulate on autopilot. Your existing customer list fills the slow weeks — revenue you already paid to acquire.",
   },
 ]
 
@@ -96,12 +86,12 @@ export default function ServicesPage() {
               Services
             </p>
             <h1 className="font-display font-700 text-4xl md:text-5xl text-ink leading-[1.1] mb-5">
-              What We Build for Your Firm
+              One Flagship System: Your AI Receptionist
             </h1>
             <p className="text-subtle text-lg leading-relaxed max-w-xl mx-auto">
-              Every system is custom-built for your intake process. We don&apos;t sell generic
-              automation subscriptions — we build systems that fit the way your firm actually
-              handles cases.
+              Everything we build serves one outcome — no job lost because nobody answered
+              the phone. The AI receptionist is the core; everything below is how it wins
+              jobs for your company end to end.
             </p>
           </FadeIn>
         </div>
@@ -136,7 +126,7 @@ export default function ServicesPage() {
                       </div>
                       <div>
                         <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-2">
-                          Result for Your Firm
+                          Result for Your Company
                         </p>
                         <p className="text-subtle text-sm leading-relaxed">{result}</p>
                       </div>
@@ -146,7 +136,7 @@ export default function ServicesPage() {
                         href="/contact"
                         className="inline-flex items-center gap-2 text-accent text-sm font-medium hover:underline"
                       >
-                        Get this built for your firm
+                        Get this built for your company
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
@@ -163,17 +153,18 @@ export default function ServicesPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <FadeIn>
             <h2 className="font-display font-700 text-3xl md:text-4xl text-ink mb-4">
-              Not sure which service fits your firm?
+              Want to know what your callers hear right now?
             </h2>
             <p className="text-subtle mb-8 max-w-md mx-auto">
-              Book a discovery call and we&apos;ll map your current intake process, identify
-              where leads are being lost, and explain exactly what we&apos;d build.
+              Book a 15-minute call. Before it, we&apos;ll call your business the way a
+              customer would — after hours — and play you exactly what we got. Then we&apos;ll
+              show you what an AI receptionist would have done instead.
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 h-12 px-8 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-all shadow-[0_0_24px_rgba(212,168,67,0.2)]"
             >
-              Book a Discovery Call
+              Book the 15-Minute Call
               <ArrowRight className="w-4 h-4" />
             </Link>
           </FadeIn>

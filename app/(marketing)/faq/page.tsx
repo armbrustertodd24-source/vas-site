@@ -10,43 +10,47 @@ import {
 } from "@/components/ui/accordion"
 
 export const metadata: Metadata = {
-  title: "FAQ — AI Automation for Personal Injury Law Firms",
+  title: "FAQ — AI Receptionists for Home Service Companies",
   description:
-    "Answers to common questions about how Vector Automation Systems works for personal injury attorneys — setup, integrations, cost, and more.",
+    "Answers to common questions about the VAS AI receptionist for restoration, HVAC, and plumbing companies — setup, integrations, emergencies, cost, and more.",
 }
 
 const faqs = [
   {
-    q: "What types of law firms do you work with?",
-    a: "We work exclusively with personal injury firms — from solo practitioners to multi-attorney practices. Our systems are built around the specific dynamics of PI intake: high lead volume, time-sensitive responses, injury pre-screening, and retainer conversion follow-up. If your firm handles auto accidents, slip and fall, medical malpractice, workers' compensation, or similar practice areas, our systems are built for your workflow.",
+    q: "What kinds of companies do you work with?",
+    a: "Home service companies where the phone decides who gets the job — restoration (water, fire, mold), HVAC, and plumbing first, plus other emergency trades like electrical and garage door. If your customers call with urgent problems and a missed call means a lost job, the system was built for your business. We also build intake automation for personal injury law firms as a separate practice — ask about it on a call.",
+  },
+  {
+    q: "Will callers know it's an AI? Will it sound robotic?",
+    a: "Modern AI voice agents hold natural, fast conversations — most callers simply experience someone helpful who picked up quickly. Your receptionist is trained on your company name, services, service area, and how you talk to customers. We're also straightforward about what it is: the AI can identify itself if asked, and anything it shouldn't handle gets transferred to a human. What callers care about at 2am isn't who answered — it's that someone did.",
+  },
+  {
+    q: "What happens with real emergencies?",
+    a: "Emergencies are the reason the system exists. The AI captures what happened, where, and how severe — then immediately alerts your on-call tech by call and text with the full details. The customer gets a confirmation that help is coming instead of a voicemail beep. Compare that to today: the emergency call hits voicemail, the customer hangs up, and your on-call tech never knows the job existed.",
+  },
+  {
+    q: "Does it work with ServiceTitan, Housecall Pro, or Jobber?",
+    a: "Yes. We integrate with the major field service platforms — ServiceTitan, Housecall Pro, Jobber, GoHighLevel, and others. Calls, transcripts, customer records, and bookings flow into your existing system automatically. Your dispatch board stays the source of truth; nobody re-types anything. If you run something less common, we'll confirm on the first call whether a direct integration is possible.",
   },
   {
     q: "How long does setup take?",
-    a: "Most systems are live within 2–4 weeks from the initial discovery call. That includes mapping your intake process, building the system, integrating it with your existing tools, testing it thoroughly, and training your team on how to manage it. More complex builds — multiple practice areas, deep case management integrations, or multi-location firms — may take closer to 6 weeks. We give you a clear timeline before any work begins, and nothing goes live until you've reviewed and approved it.",
+    a: "Most systems are live in about two weeks. We start by testing your current phone setup (calling your line the way a customer would), then train the AI on your services, service area, rates, and dispatch rules, test it against real scenarios with you, and cut it in — usually starting with after-hours and overflow only, so nothing about your daytime operation changes until you're comfortable.",
   },
   {
-    q: "Will this replace our current case management software?",
-    a: "No. We integrate with the software you already use — Clio, MyCase, Filevine, Litify, Salesforce Legal, or others. We add automation on top of your existing stack, not instead of it. Your team keeps working the way they're used to; the automation handles the parts that don't require a human.",
-  },
-  {
-    q: "Can this work with our intake CRM?",
-    a: "Yes. We integrate with most major intake and case management platforms. Our automations can create new contacts, update lead records, move cases through stages, log call and chat transcripts, trigger team notifications, and more — automatically, based on what happens in your intake process. If you use a less common platform, we'll let you know during the discovery call whether a direct integration is possible.",
-  },
-  {
-    q: "Is this customized to our practice areas?",
-    a: "Yes, entirely. The AI is trained on your specific injury types, your intake screening criteria, and the questions your team asks on every intake call. If you handle auto accidents and slip and fall differently, the system reflects that. If you only take cases in certain states or with certain injury thresholds, the AI screens for that. It's not a generic chatbot — it screens leads the way a trained intake specialist at your firm would.",
-  },
-  {
-    q: "Do you offer support after setup?",
-    a: "Yes. Ongoing support is part of how we work. After launch, we monitor the system, handle any issues, update the AI as your intake criteria evolves, and are available to make changes as your firm grows or your practice areas shift. Automation that isn't maintained breaks down over time — we stay involved to make sure it doesn't.",
+    q: "Do I have to replace my phone number or phone system?",
+    a: "No. Your number stays your number. The AI typically picks up on call forwarding rules — after X rings, after hours, or when your line is busy. Your team keeps answering the way they always have; the AI catches what they can't. You control exactly when it's on.",
   },
   {
     q: "How much does it cost?",
-    a: "Pricing depends on the scope — which systems you need, how many channels (chat, voice, SMS, email), what integrations are required, and how much ongoing management is involved. We don't publish flat rates because every firm's intake process is different. After a discovery call, you'll receive a clear proposal with no hidden fees. What we can say is that for most PI firms, the cost of one signed case from an after-hours lead that would have otherwise been missed pays for months of the system.",
+    a: "Less than the first job it saves you, and far less than a human answering service that just takes messages. Exact pricing depends on call volume, integrations, and whether you want follow-up and rebooking automation included — you'll get a clear monthly number after a 15-minute call, with no long-term contract. For context: one saved water-loss job typically covers many months of the system.",
   },
   {
-    q: "Can I try a demo first?",
-    a: "Yes. Visit our Demo page to see a live AI chat intake demo, a voice agent demonstration, and a side-by-side comparison of a manual PI intake process versus an automated one. You can also book a call for a custom walkthrough — where we demo the system against a scenario specific to your firm's practice areas and intake process.",
+    q: "How do I know it will actually work for my company?",
+    a: "Two ways. First, call our demo line and talk to the AI yourself before you spend a dollar. Second, we run every new client as a 30-day pilot on your real phone line — you see every call it answered, every job it booked, and every emergency it dispatched. If the numbers don't justify the cost, you walk away.",
+  },
+  {
+    q: "Who's behind Vector Automation Systems?",
+    a: "VAS is run by its founder — 20 years in the military and federal law enforcement before building automation systems. That background means two things for you: systems built to work under pressure, not just in demos, and a straight answer on what the technology can and can't do. You work directly with the person who builds and maintains your system.",
   },
 ]
 
@@ -65,8 +69,8 @@ export default function FAQPage() {
               Common Questions
             </h1>
             <p className="text-subtle text-lg leading-relaxed max-w-lg mx-auto">
-              Straightforward answers to the questions we hear most from personal injury
-              attorneys about how our systems work, what they cost, and how they&apos;re built.
+              Straight answers to the questions we hear most from restoration, HVAC, and
+              plumbing owners — how it works, what it costs, and what happens at 2am.
             </p>
           </FadeIn>
         </div>
@@ -94,16 +98,24 @@ export default function FAQPage() {
               Still have questions?
             </h2>
             <p className="text-subtle mb-7 max-w-sm mx-auto">
-              Book a short call and we&apos;ll answer anything specific to your firm and
-              practice areas.
+              Call the demo line and ask the AI yourself — or book a 15-minute call and ask
+              a human.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 h-11 px-7 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-all"
-            >
-              Book a Call
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href="/demo"
+                className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-all"
+              >
+                Hear It Answer
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-lg border border-white/[0.12] text-ink text-sm font-medium hover:bg-white/[0.05] transition-colors"
+              >
+                Book a Call
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </FadeIn>
         </div>
       </section>

@@ -4,19 +4,20 @@ import Footer from "@/components/Footer"
 
 export const metadata: Metadata = {
   title: {
-    default: "Vector Automation Systems — AI Automation for Lead Capture & Appointments",
+    default: "Vector Automation Systems — AI Receptionists for Home Service Companies",
     template: "%s | Vector Automation Systems",
   },
   description:
-    "Vector Automation Systems helps businesses automate lead response, appointment scheduling, and customer follow-up with AI chat, voice, and workflow systems.",
+    "Vector Automation Systems builds AI receptionists for restoration, HVAC, and plumbing companies — answering every call 24/7, qualifying jobs, dispatching emergencies, and booking work into your schedule.",
   keywords: [
-    "AI automation",
-    "lead capture automation",
+    "AI receptionist",
+    "answering service for HVAC",
+    "answering service for plumbers",
+    "restoration company answering service",
+    "missed call text back",
+    "AI voice agent for home services",
+    "after hours call answering",
     "appointment booking automation",
-    "AI chatbot for business",
-    "AI voice agent",
-    "CRM automation",
-    "follow-up automation",
   ],
   openGraph: {
     siteName: "Vector Automation Systems",

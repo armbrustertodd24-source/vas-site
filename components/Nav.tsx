@@ -74,10 +74,10 @@ export default function Nav() {
         {/* CTA + Mobile toggle */}
         <div className="flex items-center gap-3">
           <Link
-            href="/contact"
+            href="/demo"
             className="hidden md:inline-flex items-center justify-center h-9 px-5 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-colors"
           >
-            Book a Demo
+            Hear It Answer
           </Link>
           <button
             onClick={() => setOpen(!open)}
@@ -108,10 +108,10 @@ export default function Nav() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/demo"
               className="mt-2 flex items-center justify-center h-11 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-colors"
             >
-              Book a Demo
+              Hear It Answer
             </Link>
           </div>
         </div>

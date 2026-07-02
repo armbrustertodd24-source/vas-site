@@ -3,10 +3,10 @@
 import { motion } from "framer-motion"
 
 const steps = [
-  { id: 1, label: "Injury Lead Contacts", sub: "Chat, form, or call", delay: 0 },
-  { id: 2, label: "AI Pre-Screens", sub: "Instant qualification", delay: 0.15 },
-  { id: 3, label: "Consult Booked", sub: "Auto-scheduled", delay: 0.3 },
-  { id: 4, label: "Retainer Follow-Up", sub: "CRM updated", delay: 0.45 },
+  { id: 1, label: "Call at 2:14 AM", sub: "Burst pipe emergency", delay: 0 },
+  { id: 2, label: "AI Answers", sub: "Before the second ring", delay: 0.15 },
+  { id: 3, label: "Job Qualified", sub: "Location, urgency, details", delay: 0.3 },
+  { id: 4, label: "Booked & Dispatched", sub: "On-call tech alerted", delay: 0.45 },
 ]
 
 function PulseDot({ delay }: { delay: number }) {
@@ -108,8 +108,8 @@ export default function WorkflowMockup() {
           className="mt-6 pt-5 border-t border-white/[0.06] grid grid-cols-3 gap-4"
         >
           {[
-            { label: "Response time", value: "< 30s" },
-            { label: "Leads captured", value: "100%" },
+            { label: "Rings to answer", value: "< 2" },
+            { label: "Calls answered", value: "100%" },
             { label: "Running", value: "24/7" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">

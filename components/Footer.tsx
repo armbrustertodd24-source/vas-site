@@ -17,20 +17,20 @@ export default function Footer() {
       {/* Footer CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <p className="text-subtle text-sm uppercase tracking-widest font-medium mb-4">
-          Ready to automate your intake?
+          How many calls did you miss this week?
         </p>
         <h2 className="font-display font-700 text-3xl md:text-4xl text-ink mb-4">
-          See how Vector Automation Systems<br className="hidden sm:block" /> can work for your firm
+          Your phone should be your best employee.<br className="hidden sm:block" /> Let&apos;s make it one.
         </h2>
         <p className="text-subtle mb-8 max-w-md mx-auto">
-          Book a short call and we&apos;ll map your intake process and show you exactly where automation would capture more cases.
+          Call the demo line and hear the AI answer, or book a 15-minute call — we&apos;ll test your phones and show you exactly what your callers get today.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
-            href="/contact"
+            href="/demo"
             className="inline-flex items-center justify-center h-11 px-8 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-colors"
           >
-            Book a Demo
+            Hear It Answer
           </Link>
           <Link
             href="/contact"

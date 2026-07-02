@@ -6,29 +6,29 @@ import { FadeIn, FadeInStagger, FadeInItem } from "@/components/FadeIn"
 export const metadata: Metadata = {
   title: "About — Vector Automation Systems",
   description:
-    "Learn who we are and why we focus exclusively on building AI automation for personal injury law firms.",
+    "Who we are and why we build AI receptionists for home service companies — founded on 20 years of military and federal law enforcement service.",
 }
 
 const differentiators = [
   {
-    title: "Built exclusively for personal injury firms",
+    title: "Built for the trades, not adapted to them",
     description:
-      "We don't build generic automation for any business that comes along. We focus on PI intake because we understand the specific dynamics — high lead volume, time-sensitive response windows, injury pre-screening, and the pressure of retainer conversion.",
+      "We don't sell generic chatbots to any business that comes along. We build for restoration, HVAC, and plumbing — where calls are emergencies, jobs are won by whoever answers first, and the system has to work at 2am, not just in a demo.",
   },
   {
     title: "We build the system, not just a strategy",
     description:
-      "We don't hand you a plan and a Zapier subscription. We build the actual intake automation, connect it to your tools, test it against real scenarios, and hand it over running.",
+      "No plan-and-a-Zapier-subscription handoffs. We build the actual receptionist, connect it to your phone line and your field service software, test it against real call scenarios, and hand it over answering.",
   },
   {
-    title: "Every system fits your firm's intake process",
+    title: "Trained on your company, not a template",
     description:
-      "Your practice areas, intake criteria, and team structure are unique. We map your process first and build around it — so the system works the way your firm works, not the other way around.",
+      "Your services, your service area, your rates, your dispatch rules, your on-call rotation. The AI qualifies jobs the way your best CSR would — because it's trained on how your company actually handles calls.",
   },
   {
-    title: "We stay involved after launch",
+    title: "We stay on the line after launch",
     description:
-      "Intake processes change. Case criteria shift. Firms grow. We monitor, adjust, and update your automation as your firm evolves — ongoing support is how we operate, not an upsell.",
+      "Service areas grow, rates change, seasons shift. We monitor performance, tune the AI, and adjust as your business evolves. Ongoing support is how we operate, not an upsell.",
   },
 ]
 
@@ -55,24 +55,22 @@ export default function AboutPage() {
         <FadeIn>
           <div className="space-y-5">
             <p className="text-ink/80 text-lg leading-relaxed">
-              Vector Automation Systems is an AI automation agency that builds custom intake
-              and follow-up systems for personal injury law firms. We specialize in the parts
-              of running a PI practice where leads are won or lost — the first response, the
-              pre-screening, the consultation booking, and the follow-up before someone signs
-              a retainer.
+              Vector Automation Systems builds AI receptionists for home service companies —
+              restoration, HVAC, and plumbing businesses whose jobs are won or lost on the
+              phone. We handle the moment that matters most: the call you can&apos;t answer
+              because you&apos;re on a roof, under a house, or asleep at 2am.
             </p>
             <p className="text-subtle text-base leading-relaxed">
-              Personal injury firms face a specific problem that most automation tools aren&apos;t
-              built to solve: potential clients who are injured, in pain, and ready to hire
-              someone right now — and they&apos;ll hire whoever responds to them first. If your
-              firm doesn&apos;t have a system that responds immediately, pre-screens the case,
-              and books a consultation before a competitor does, you&apos;re losing cases you
-              never even knew you had.
+              Home service companies face a problem most software isn&apos;t built to solve:
+              customers with urgent, expensive problems who will hire whoever answers first.
+              A homeowner with a flooded basement doesn&apos;t leave a voicemail — they hang
+              up and call the next company on Google. Every one of those calls is a real job,
+              with real revenue, going to a competitor because of six unanswered rings.
             </p>
             <p className="text-subtle text-base leading-relaxed">
-              We build the systems that fix that problem. Not consulting, not templates — actual
-              working automation, connected to your tools, built around your intake process, and
-              supported after launch.
+              We build the systems that fix that. Not consulting, not templates — a working
+              AI receptionist connected to your phone line and your field service software,
+              trained on your business, and supported after launch.
             </p>
           </div>
         </FadeIn>
@@ -86,9 +84,7 @@ export default function AboutPage() {
               Our Mission
             </p>
             <blockquote className="font-display font-600 text-2xl md:text-3xl text-ink leading-snug border-l-2 border-accent pl-6">
-              Help personal injury firms stop losing cases to slow response times by building
-              intake automation that is fast, accurate, and built to fit the way their firm
-              actually works.
+              No home service company should lose a job because nobody picked up the phone.
             </blockquote>
           </FadeIn>
         </div>
@@ -125,9 +121,9 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <FadeIn>
             <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-6">
-              The Team
+              The Founder
             </p>
-            {/* PLUG IN: Founder photo and bio here */}
+            {/* PLUG IN: Founder photo here */}
             <div className="flex flex-col sm:flex-row gap-6 items-start">
               <div className="w-20 h-20 rounded-xl bg-surface-2 border border-rim flex items-center justify-center flex-shrink-0">
                 <span className="text-subtle text-xs text-center leading-tight px-2">
@@ -135,13 +131,27 @@ export default function AboutPage() {
                 </span>
               </div>
               <div>
-                <h3 className="font-display font-600 text-ink text-xl mb-1">Founder & Lead Automation Engineer</h3>
+                <h3 className="font-display font-600 text-ink text-xl mb-1">Founder &amp; Lead Automation Engineer</h3>
                 <p className="text-accent text-sm mb-3">Vector Automation Systems</p>
-                <p className="text-subtle text-sm leading-relaxed">
-                  Add your bio here — your background, what led you to focus on personal injury
-                  firms, and what you bring to each engagement. Keep it direct and personal,
-                  not corporate.
-                </p>
+                <div className="space-y-3 text-subtle text-sm leading-relaxed">
+                  <p>
+                    Before building automation systems, I spent 20 years in the military and
+                    federal law enforcement — two decades of work where answering the call,
+                    every time, wasn&apos;t a slogan. It was the job.
+                  </p>
+                  <p>
+                    That&apos;s the standard I build to. Home service companies run on the
+                    same principle: when someone calls with an emergency, somebody has to
+                    pick up. The companies that do win the job; the ones that don&apos;t
+                    never know what they lost. I build systems that make sure your company
+                    is always the one that answers.
+                  </p>
+                  <p>
+                    When you work with VAS, you work with me — the person who builds,
+                    tests, and maintains your system. No account managers, no handoffs,
+                    no excuses.
+                  </p>
+                </div>
               </div>
             </div>
           </FadeIn>
@@ -156,24 +166,26 @@ export default function AboutPage() {
               Our Approach
             </p>
             <h2 className="font-display font-600 text-2xl text-ink mb-5">
-              Process-first, results-focused. No fluff.
+              Test first. Build second. Prove it with your own calls.
             </h2>
             <div className="space-y-4 text-subtle text-base leading-relaxed">
               <p>
-                We don&apos;t lead with technology. We lead with your intake process. Before we
-                build anything, we understand exactly how potential clients reach your firm, how
-                your team handles them today, and where the gaps are — the after-hours calls no
-                one answers, the leads that go cold because follow-up is manual, the consultations
-                that never get booked.
+                We don&apos;t lead with technology — we lead with evidence. Before we build
+                anything, we call your business the way a customer would: after hours, during
+                the lunch rush, on a weekend. You hear exactly what your callers hear today.
+                Most owners have never listened to their own voicemail greeting at 9pm; it&apos;s
+                usually an uncomfortable 40 seconds.
               </p>
               <p>
-                From there, we build systems that address real problems, not hypothetical ones.
-                The AI is trained on your case criteria. The integrations connect to your actual
-                tools. The workflows match the way your intake team already operates.
+                From there we build a receptionist around your real operation — your services,
+                your dispatch rules, your on-call rotation — and test it against the actual
+                calls your company gets. It goes live gradually, starting with the calls
+                you&apos;re missing anyway, so there&apos;s zero risk to your daytime operation.
               </p>
               <p>
-                We measure success by signed cases and saved staff time — not by how sophisticated
-                the automation looks on a diagram.
+                We measure success in answered calls, booked jobs, and dispatched emergencies —
+                numbers you can check against your own schedule, not a dashboard designed to
+                look impressive.
               </p>
             </div>
           </FadeIn>
@@ -184,17 +196,17 @@ export default function AboutPage() {
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <FadeIn>
           <h2 className="font-display font-700 text-2xl md:text-3xl text-ink mb-3">
-            Ready to work together?
+            Ready to stop losing jobs to voicemail?
           </h2>
           <p className="text-subtle mb-7 max-w-sm mx-auto">
-            Start with a discovery call. We&apos;ll learn your intake process and tell you
-            exactly what we&apos;d build.
+            Start with a 15-minute call. We&apos;ll test your phones and show you exactly
+            what your callers get today.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 h-11 px-7 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-all"
           >
-            Book a Call
+            Book the Call
             <ArrowRight className="w-4 h-4" />
           </Link>
         </FadeIn>

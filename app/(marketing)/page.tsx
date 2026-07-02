@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import {
-  MessageSquare,
   Phone,
-  UserCheck,
+  PhoneMissed,
+  Flame,
+  Droplets,
+  ThermometerSun,
   Calendar,
+  BellRing,
   GitBranch,
-  HeadphonesIcon,
   Clock,
   Settings,
   Wrench,
@@ -24,107 +26,140 @@ import {
 } from "@/components/ui/accordion"
 
 export const metadata: Metadata = {
-  title: "Vector Automation Systems — AI Automation for Personal Injury Law Firms",
+  title: "Vector Automation Systems — AI Receptionist for Home Service Companies",
   description:
-    "AI automation systems that capture injury leads, book consultations, and follow up automatically — built specifically for personal injury attorneys.",
+    "AI receptionists for restoration, HVAC, and plumbing companies — answering every call 24/7, qualifying the job, and booking it into your schedule before the caller dials the next name on Google.",
 }
 
-const services = [
+const verticals = [
   {
-    icon: MessageSquare,
-    title: "AI Chat Intake Assistants",
-    description:
-      "A 24/7 AI chat system that engages potential clients the moment they land on your site — gathering case details, screening injury type, and booking consultations without staff involvement.",
+    icon: Droplets,
+    title: "Restoration",
+    pain: "Water and fire losses happen at 2am, and the first company to answer usually wins the claim. A missed emergency call isn't a missed call — it's an $8,000–$15,000 job that just went to your competitor.",
+    points: [
+      "Answers every emergency call, every hour",
+      "Captures loss type, location, and severity",
+      "Alerts your on-call tech immediately",
+    ],
   },
+  {
+    icon: ThermometerSun,
+    title: "HVAC",
+    pain: "On the hottest day of the year your phones ring more than your CSRs can answer. Every call that rolls to voicemail is a $300 service call — or an $8,000 changeout — going to the next name on Google.",
+    points: [
+      "Catches after-hours and peak-season overflow",
+      "Books service calls straight into your schedule",
+      "Qualifies repair vs. replacement leads",
+    ],
+  },
+  {
+    icon: Flame,
+    title: "Plumbing",
+    pain: "Nobody with a burst pipe leaves a voicemail. They hang up and call the next plumber — and the plumber who answers gets the job, the water heater upsell, and the review.",
+    points: [
+      "Answers emergencies before the second ring",
+      "Collects job details and photos by text",
+      "Dispatches urgent jobs to your on-call plumber",
+    ],
+  },
+]
+
+const capabilities = [
   {
     icon: Phone,
-    title: "AI Voice Agents",
+    title: "24/7 Call Answering",
     description:
-      "An AI phone agent that answers after-hours and overflow calls from injured people, captures their information, and schedules consultations — so you never miss a potential case.",
+      "An AI receptionist trained on your services, service area, and pricing rules — answering every call in seconds, nights and weekends included. It sounds professional, not robotic.",
   },
   {
-    icon: UserCheck,
-    title: "Lead Qualification & Pre-Screening",
+    icon: PhoneMissed,
+    title: "Missed-Call Text-Back",
     description:
-      "Automatically screen incoming leads for case viability — injury type, liability, timeframe — so your intake team only handles leads that are worth pursuing.",
+      "If a caller does slip through, they get an instant text that keeps the conversation alive — so they're talking to you instead of dialing your competitor.",
   },
   {
     icon: Calendar,
-    title: "Consultation Booking Automation",
+    title: "Job Booking & Scheduling",
     description:
-      "Let potential clients book directly into your consultation calendar. Automated confirmations and reminders reduce no-shows and keep your schedule full.",
+      "The AI qualifies the job, checks your availability, and books it directly into your calendar or field service software. You wake up to booked jobs, not voicemails.",
+  },
+  {
+    icon: BellRing,
+    title: "Emergency Dispatch Alerts",
+    description:
+      "Real emergencies get escalated instantly — the AI captures the details, then calls or texts your on-call tech so a human is moving while the customer is still on the line.",
   },
   {
     icon: GitBranch,
-    title: "Retainer Follow-Up Systems",
+    title: "CRM & FSM Integration",
     description:
-      "Automated follow-up sequences that keep unretained leads engaged — timely messages that move prospects toward signing without your staff making manual calls.",
+      "Every call, transcript, and booking lands in the tools you already run — ServiceTitan, Housecall Pro, Jobber, or GoHighLevel. No double entry, no lost records.",
   },
   {
-    icon: HeadphonesIcon,
-    title: "Client Communication Automation",
+    icon: Clock,
+    title: "Follow-Up & Rebooking",
     description:
-      "Keep signed clients informed with automated case status updates, appointment reminders, and document requests — reducing inbound calls and improving client satisfaction.",
+      "Estimates that didn't close, maintenance that's due, customers who haven't called in a year — automated follow-up that fills your schedule from the list you already own.",
   },
 ]
 
 const trust = [
-  { icon: Clock, label: "Fast Implementation" },
-  { icon: Settings, label: "Built for Your Practice" },
-  { icon: Wrench, label: "Integrates With Your Case Management Software" },
-  { icon: LifeBuoy, label: "Ongoing Support Included" },
+  { icon: Phone, label: "Answers Before the Second Ring" },
+  { icon: Settings, label: "Trained on Your Trade & Service Area" },
+  { icon: Wrench, label: "Works With ServiceTitan, Housecall Pro & Jobber" },
+  { icon: LifeBuoy, label: "Live in About 2 Weeks" },
 ]
 
 const steps = [
   {
     number: "01",
-    title: "We map your intake process",
+    title: "We test your phones",
     description:
-      "We start by understanding how potential clients reach you, how your team currently handles them, and exactly where leads are slipping through the cracks.",
+      "We call your business the way a customer would — after hours, during peak times — and show you exactly what your callers hear today. Most owners are surprised by what we find.",
   },
   {
     number: "02",
-    title: "We build and customize your system",
+    title: "We build your AI receptionist",
     description:
-      "Every automation is built around your practice areas, your intake criteria, and your team's workflow — not a generic law firm template.",
+      "Trained on your services, your service area, your rates, and how you dispatch. It qualifies jobs the way your best CSR would — then we test it against real scenarios before it goes live.",
   },
   {
     number: "03",
-    title: "You capture more cases and save staff time",
+    title: "You stop losing jobs",
     description:
-      "The system responds to leads instantly, pre-screens cases, and books consultations around the clock — without your team manually handling every inquiry.",
+      "Every call answered, every job qualified, urgent work dispatched, and appointments booked into your schedule — while you and your crew stay on the tools.",
   },
 ]
 
 const benefits = [
-  "Respond to injury leads instantly",
-  "Capture after-hours and weekend cases",
-  "Fill your consultation calendar",
-  "Consistent follow-up on unsigned leads",
-  "Free up your intake staff",
-  "Better client experience from day one",
+  "Answer every call — 2am included",
+  "Book jobs while you're on a roof or under a house",
+  "Win the emergency before your competitor hears it ring",
+  "Stop paying for ads that ring to voicemail",
+  "Every call logged in your CRM automatically",
+  "Follow up on every estimate you send",
 ]
 
 const faqPreview = [
   {
-    q: "What types of law firms do you work with?",
-    a: "We work exclusively with personal injury firms — solo practitioners, small firms, and multi-attorney practices. If you handle auto accidents, slip and fall, medical malpractice, or other injury cases and you're losing leads to slow response times, we can help.",
+    q: "What kinds of companies do you work with?",
+    a: "Home service companies that live and die by the phone — restoration, HVAC, and plumbing first, along with other emergency trades. If a missed call costs you a job, our system is built for you.",
   },
   {
-    q: "How long does setup take?",
-    a: "Most systems go live within 2–4 weeks from the initial call. We handle the build, integration, and testing. You review and approve before anything goes live.",
+    q: "Will it sound like a robot?",
+    a: "No. Modern AI voice agents hold natural conversations, and yours is trained on your company's services, service area, and tone. Most callers simply experience a helpful person who answered fast. And for anything the AI shouldn't handle, it transfers to a human.",
   },
   {
-    q: "Will this replace our case management software?",
-    a: "No. We integrate with your existing software — Clio, MyCase, Filevine, or whatever you use. We add automation on top of your current stack, not instead of it.",
+    q: "What happens with real emergencies?",
+    a: "The AI captures the details, flags the urgency, and immediately alerts your on-call tech by call or text. Emergencies get to a human faster than they would through voicemail — that's the whole point.",
   },
   {
-    q: "Is this customized to our practice areas?",
-    a: "Yes. The AI is trained on your specific injury types, intake criteria, and the questions your team asks. It screens leads the same way a trained intake specialist would.",
+    q: "Does it work with my field service software?",
+    a: "Yes. We integrate with ServiceTitan, Housecall Pro, Jobber, GoHighLevel, and most major platforms — calls, transcripts, and bookings flow straight into the system you already use.",
   },
   {
-    q: "Can I try a demo first?",
-    a: "Yes — visit the Demo page to see a live AI chat intake demo and a side-by-side comparison of a manual intake process vs. an automated one. You can also book a call for a walkthrough tailored to your firm.",
+    q: "How do I know it actually works?",
+    a: "You hear it before you buy it. Call our demo line and talk to the AI yourself. Then we run a 30-day pilot on your own phone line — if it doesn't answer calls and book real jobs, you don't keep paying.",
   },
 ]
 
@@ -141,29 +176,29 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-rim-accent bg-accent-muted mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
                 <span className="text-accent text-xs font-medium tracking-wide">
-                  AI Automation for Personal Injury Law Firms
+                  AI Receptionists for Restoration, HVAC & Plumbing
                 </span>
               </div>
               <h1 className="font-display font-700 text-4xl md:text-5xl xl:text-6xl text-ink leading-[1.1] tracking-tight mb-6">
-                AI Automation Systems That Capture Injury Leads, Book Consultations, and Work 24/7
+                Every Missed Call Is a Job Your Competitor Just Booked
               </h1>
               <p className="text-subtle text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
-                Vector Automation Systems helps personal injury firms respond to leads instantly,
-                pre-screen cases automatically, book consultations without staff involvement, and
-                follow up with unsigned prospects until they sign.
+                Vector Automation Systems builds AI receptionists for home service companies —
+                answering every call 24/7, qualifying the job, dispatching emergencies, and
+                booking work into your schedule before the caller dials the next name on Google.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  href="/contact"
+                  href="/demo"
                   className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-all shadow-[0_0_24px_rgba(212,168,67,0.2)] hover:shadow-[0_0_36px_rgba(212,168,67,0.35)]"
                 >
-                  Book a Demo
+                  Hear It Answer
                 </Link>
                 <Link
-                  href="/demo"
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-lg border border-white/[0.12] text-ink text-sm font-medium hover:bg-white/[0.05] transition-colors"
                 >
-                  See the Demo
+                  Book a 15-Minute Call
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -190,21 +225,97 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── What We Automate ── */}
+      {/* ── Verticals ── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <FadeIn>
           <div className="text-center mb-14">
             <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3">
-              What We Automate
+              Built for Your Trade
             </p>
             <h2 className="font-display font-700 text-3xl md:text-4xl text-ink">
-              Intake and follow-up systems that run while your team focuses on cases
+              The phone is where your jobs are won or lost
+            </h2>
+          </div>
+        </FadeIn>
+
+        <FadeInStagger className="grid md:grid-cols-3 gap-5">
+          {verticals.map(({ icon: Icon, title, pain, points }) => (
+            <FadeInItem key={title}>
+              <div className="h-full p-6 rounded-xl border border-rim bg-surface hover:border-rim-accent hover:bg-surface-2 transition-all group flex flex-col">
+                <div className="w-10 h-10 rounded-lg bg-accent-muted border border-rim-accent flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                  <Icon className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="font-display font-600 text-ink text-xl mb-3">{title}</h3>
+                <p className="text-subtle text-sm leading-relaxed mb-5">{pain}</p>
+                <div className="space-y-2.5 mt-auto">
+                  {points.map((point) => (
+                    <div key={point} className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-ink/80 text-sm">{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeInItem>
+          ))}
+        </FadeInStagger>
+      </section>
+
+      {/* ── The Math ── */}
+      <section className="border-y border-white/[0.06] bg-surface/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3">
+                The Missed-Call Math
+              </p>
+              <h2 className="font-display font-700 text-3xl md:text-4xl text-ink max-w-2xl mx-auto">
+                A missed call isn&apos;t a missed call. It&apos;s the next name on Google.
+              </h2>
+            </div>
+          </FadeIn>
+
+          <FadeInStagger className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+            {[
+              {
+                stat: "$8k–$15k",
+                label: "Typical water-loss job that goes to whichever restoration company answers first",
+              },
+              {
+                stat: "Most callers",
+                label: "Won't leave a voicemail for an emergency — they hang up and dial your competitor",
+              },
+              {
+                stat: "After hours",
+                label: "Is when emergencies happen — and when most companies' phones go unanswered",
+              },
+            ].map(({ stat, label }) => (
+              <FadeInItem key={stat}>
+                <div className="h-full p-6 rounded-xl border border-rim bg-surface text-center">
+                  <p className="font-display font-700 text-accent text-3xl mb-3">{stat}</p>
+                  <p className="text-subtle text-sm leading-relaxed">{label}</p>
+                </div>
+              </FadeInItem>
+            ))}
+          </FadeInStagger>
+        </div>
+      </section>
+
+      {/* ── What It Does ── */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <FadeIn>
+          <div className="text-center mb-14">
+            <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3">
+              What Your AI Receptionist Does
+            </p>
+            <h2 className="font-display font-700 text-3xl md:text-4xl text-ink">
+              One system that answers, qualifies, books, and follows up
             </h2>
           </div>
         </FadeIn>
 
         <FadeInStagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map(({ icon: Icon, title, description }) => (
+          {capabilities.map(({ icon: Icon, title, description }) => (
             <FadeInItem key={title}>
               <div className="h-full p-6 rounded-xl border border-rim bg-surface hover:border-rim-accent hover:bg-surface-2 transition-all group">
                 <div className="w-10 h-10 rounded-lg bg-accent-muted border border-rim-accent flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
@@ -227,7 +338,7 @@ export default function HomePage() {
                 How It Works
               </p>
               <h2 className="font-display font-700 text-3xl md:text-4xl text-ink">
-                From kickoff to live system in weeks, not months
+                From first call to live system in about two weeks
               </h2>
             </div>
           </FadeIn>
@@ -259,20 +370,20 @@ export default function HomePage() {
           <div className="relative rounded-2xl border border-rim-accent bg-accent-muted overflow-hidden p-10 md:p-14 text-center">
             <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.07] to-transparent pointer-events-none" />
             <p className="relative text-accent text-sm font-semibold uppercase tracking-widest mb-3">
-              Live Demo
+              Hear It Yourself
             </p>
             <h2 className="relative font-display font-700 text-3xl md:text-4xl text-ink mb-4">
-              See the system in action before you commit
+              Don&apos;t read about it. Call it.
             </h2>
             <p className="relative text-subtle mb-8 max-w-md mx-auto">
-              See how the AI handles an incoming injury lead, pre-screens the case, and books
-              a consultation — without anyone on your team getting involved.
+              Call our demo line and talk to the AI receptionist like a customer with a
+              burst pipe at 2am. Then imagine it answering your phone instead of your voicemail.
             </p>
             <Link
               href="/demo"
               className="inline-flex items-center gap-2 h-12 px-8 rounded-lg bg-accent text-page text-sm font-semibold hover:bg-accent-dark transition-all shadow-[0_0_24px_rgba(212,168,67,0.2)]"
             >
-              Try the Demo
+              Call the Demo Line
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -287,7 +398,7 @@ export default function HomePage() {
               Business Outcomes
             </p>
             <h2 className="font-display font-700 text-3xl md:text-4xl text-ink">
-              What changes when your intake runs automatically
+              What changes when every call gets answered
             </h2>
           </div>
         </FadeIn>
@@ -339,6 +450,22 @@ export default function HomePage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ── PI note ── */}
+      <section className="border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+          <FadeIn>
+            <p className="text-subtle text-sm">
+              Run a personal injury law firm? We also build intake automation for PI
+              practices —{" "}
+              <Link href="/contact" className="text-accent hover:underline">
+                book a call
+              </Link>{" "}
+              and ask about legal intake.
+            </p>
           </FadeIn>
         </div>
       </section>

@@ -4,9 +4,9 @@ import { FadeIn, FadeInStagger, FadeInItem } from "@/components/FadeIn"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Contact — Book a Demo for Your PI Firm",
+  title: "Contact — Book a 15-Minute Call",
   description:
-    "Book a demo or send us a message. Tell us about your firm's intake process and we'll show you exactly where automation would help.",
+    "Book a 15-minute call or send us a message. We'll test your phones, show you what your callers hear today, and what an AI receptionist would do instead.",
 }
 
 const details = [
@@ -17,8 +17,8 @@ const details = [
   },
   {
     icon: Calendar,
-    label: "Discovery call",
-    value: "30 minutes. No pitch, no pressure.",
+    label: "First call",
+    value: "15 minutes. We show you what we found on your phone line — no pitch deck.",
   },
   {
     icon: Mail,
@@ -39,11 +39,11 @@ export default function ContactPage() {
               Contact
             </p>
             <h1 className="font-display font-700 text-4xl md:text-5xl text-ink leading-[1.1] mb-4">
-              Let&apos;s Build an Intake Automation System for Your Firm
+              Let&apos;s Find Out What Your Missed Calls Are Costing You
             </h1>
             <p className="text-subtle text-lg leading-relaxed max-w-lg mx-auto">
-              Tell us about your firm and how you currently handle incoming injury leads.
-              We&apos;ll follow up within one business day.
+              Tell us about your company and how calls are handled today — especially after
+              hours. We&apos;ll follow up within one business day.
             </p>
           </FadeIn>
         </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
             <FadeIn delay={0.15}>
               <div className="rounded-xl border border-rim bg-surface overflow-hidden">
                 <div className="px-5 py-4 border-b border-white/[0.06]">
-                  <h3 className="font-display font-600 text-ink text-lg">Book a Demo Call</h3>
+                  <h3 className="font-display font-600 text-ink text-lg">Book Your 15-Minute Call</h3>
                   <p className="text-subtle text-sm mt-1">
                     Select a time that works for you.
                   </p>
