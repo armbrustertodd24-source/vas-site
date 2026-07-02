@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Vector Automation Systems",
   description:
-    "Vector Automation Systems helps businesses automate lead response, appointment scheduling, and customer follow-up with AI chat, voice, and workflow systems.",
+    "AI receptionists for restoration, HVAC, and plumbing companies — answering every call 24/7, qualifying jobs, dispatching emergencies, and booking work into your schedule.",
   metadataBase: new URL("https://vectorautomationsystems.com"),
   icons: {
     icon: "/logo.png",

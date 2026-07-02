@@ -27,6 +27,27 @@ export const metadata: Metadata = {
   },
 }
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Vector Automation Systems",
+  url: "https://vectorautomationsystems.com",
+  logo: "https://vectorautomationsystems.com/logo.png",
+  description:
+    "AI receptionists for restoration, HVAC, and plumbing companies — answering every call 24/7, qualifying jobs, dispatching emergencies, and booking work.",
+  email: "contact@vectorautomationsystems.com",
+  areaServed: "US",
+  knowsAbout: [
+    "AI receptionist",
+    "after-hours call answering",
+    "missed call text back",
+    "appointment booking automation",
+    "HVAC answering service",
+    "plumbing answering service",
+    "restoration company answering service",
+  ],
+}
+
 export default function MarketingLayout({
   children,
 }: {
@@ -34,6 +55,10 @@ export default function MarketingLayout({
 }) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
       <Nav />
       <main className="pt-16">{children}</main>
       <Footer />
