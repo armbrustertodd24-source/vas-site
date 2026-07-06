@@ -10,6 +10,7 @@ const nav = [
   { label: "FAQ", href: "/faq" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy", href: "/privacy" },
 ]
 
 export default function Footer() {
