@@ -6,7 +6,7 @@ export const site = {
   email: "contact@vectorautomationsystems.com",
   // Must match the address used in A2P brand registration (carrier checklist
   // requires it visible on the site). Format: "1234 Street, City, ST 00000"
-  businessAddress: "",
+  businessAddress: "6545 Market Ave N, Suite 100, Canton, OH 44721",
 }
 
 export function telHref(phone: string) {
