@@ -66,7 +66,7 @@ export default function MarketingLayout({
       <script
         src="https://widgets.leadconnectorhq.com/loader.js"
         data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-        data-widget-id="6a4c10b3665c2f21034c552b"
+        data-widget-id="6a4c1146af4e624718331c50"
         data-source="WEB_USER"
         async
       />
