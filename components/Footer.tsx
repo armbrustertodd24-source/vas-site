@@ -11,6 +11,7 @@ const nav = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
 ]
 
 export default function Footer() {
@@ -74,8 +75,15 @@ export default function Footer() {
               </Link>
             ))}
           </nav>
-          <p className="text-subtle text-xs">
+          <p className="text-subtle text-xs text-center md:text-right">
             © {new Date().getFullYear()} Vector Automation Systems
+            {site.businessAddress && (
+              <>
+                <br />
+                {site.businessAddress}
+                {site.demoPhone && <> · {site.demoPhone}</>}
+              </>
+            )}
           </p>
         </div>
       </div>
