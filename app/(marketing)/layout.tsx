@@ -62,6 +62,14 @@ export default function MarketingLayout({
       <Nav />
       <main className="pt-16">{children}</main>
       <Footer />
+      {/* GHL/LeadConnector chat widget — SMS opt-in point referenced in A2P registration */}
+      <script
+        src="https://widgets.leadconnectorhq.com/loader.js"
+        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="6a4c10b3665c2f21034c552b"
+        data-source="WEB_USER"
+        async
+      />
     </>
   )
 }
